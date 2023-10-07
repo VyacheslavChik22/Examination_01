@@ -7,3 +7,10 @@
 [“Russia”, “Denmark”, “Kazan”] → []
 */
 
+Console.Clear();
+
+string[] oldStringsArray;
+string[] stringsArray;
+string[] newArray;
+int length;
+string str;

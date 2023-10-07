@@ -47,3 +47,25 @@ while (length != n)
         goto link2;
     }
 }
+
+Console.Write($"[{string.Join(", ", stringsArray)}] ->");
+int countElementsWithMinString = 0;
+for (int i = 0; i < stringsArray.Length; i++)
+{
+    if (stringsArray[i].Length <= 3) countElementsWithMinString++;
+}
+int count = 0;
+newArray = new string[countElementsWithMinString];
+for (int i = 0; i < stringsArray.Length; i++)
+{
+
+    if (stringsArray[i].Length <= 3)
+    {
+        newArray[count] = stringsArray[i];
+        count++;
+    }
+
+}
+
+Console.Write($" [{string.Join(", ", newArray)}]");
+

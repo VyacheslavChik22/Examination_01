@@ -14,3 +14,36 @@ string[] stringsArray;
 string[] newArray;
 int length;
 string str;
+
+link1:
+Console.WriteLine("Введите количество элементов массива:");
+int n = int.Parse(Console.ReadLine()!);
+if (n < 0)
+{
+    Console.WriteLine("Количество элементов массива должно быть больше нуля!");
+    goto link1;
+}
+length = 0;
+stringsArray = new string[length];
+link2:
+Console.WriteLine($"Введите {n} строк");
+while (length != n)
+{
+    str = Console.ReadLine()!;
+    if (str != "")
+    {
+        length++;
+        oldStringsArray = new string[length];
+        for (int i = 0; i < oldStringsArray.Length - 1; i++)
+        {
+            oldStringsArray[i] = stringsArray[i];
+        }
+        oldStringsArray[length - 1] = str;
+        stringsArray = oldStringsArray;
+    }
+    else
+    {
+        Console.WriteLine("Пустая строка!");
+        goto link2;
+    }
+}

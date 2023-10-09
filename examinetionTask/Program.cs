@@ -12,8 +12,9 @@ Console.Clear();
 string[] oldStringsArray;
 string[] stringsArray;
 string[] newArray;
-int length;
+int length = 0;
 string str;
+stringsArray = new string[length];
 
 link1:
 Console.WriteLine("Введите количество элементов массива:");
@@ -23,8 +24,7 @@ if (n < 0)
     Console.WriteLine("Количество элементов массива должно быть больше нуля!");
     goto link1;
 }
-length = 0;
-stringsArray = new string[length];
+
 link2:
 Console.WriteLine($"Введите {n} строк");
 while (length != n)
@@ -49,6 +49,7 @@ while (length != n)
 }
 
 Console.Write($"[{string.Join(", ", stringsArray)}] ->");
+
 int countElementsWithMinString = 0;
 for (int i = 0; i < stringsArray.Length; i++)
 {
@@ -68,4 +69,3 @@ for (int i = 0; i < stringsArray.Length; i++)
 }
 
 Console.Write($" [{string.Join(", ", newArray)}]");
-
